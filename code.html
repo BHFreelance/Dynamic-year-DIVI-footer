@@ -1,0 +1,16 @@
+<script>
+// Add A Dynamic Year In Divi Footer Copyright
+ var beg_year = 2014; // Year site went live
+ var this_year = new Date(); // Get current date
+ var copyright_text = '';
+ 
+ this_year = this_year.getFullYear();
+ if(this_year > beg_year) {
+ var year = beg_year + ' - ' + this_year;
+ } else {
+ var year = this_year;
+ }
+ jQuery(function($){
+ $('#footer-info').html('NAME © ' + year + ' ' + copyright_text + ' | <span style="font-size: 0.8em;">Design by <a href="http://bhfreelance.com/" target="”_blank”">BH Freelance</a></span>');
+ });
+</script>
